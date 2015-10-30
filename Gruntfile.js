@@ -54,7 +54,7 @@ module.exports = function(grunt) {
       },
       build: {
         files: {
-          'build/css/ontel.min.css': 'build/css/ontel.css'
+          'build/css/style.min.css': 'build/css/style.css'
         }
       }
     },
@@ -113,6 +113,14 @@ module.exports = function(grunt) {
       }
     }, //end connect
 
+
+    'gh-pages': {
+      options: {
+        base: 'build'
+      },
+        src: ['**']
+    } //end gh-pages
+
   });
 
   // Load the plugin that provides the "uglify" task.
@@ -125,6 +133,7 @@ module.exports = function(grunt) {
   grunt.registerTask('docs', [
     'jsdoc2md:docs'
   ]),
+
   grunt.registerTask('build', [
     'clean:build',
     'copy:build',
@@ -134,6 +143,11 @@ module.exports = function(grunt) {
     'postcss:build',
     'requirejs:compile',
     'clean:build2'
+  ]);
+
+  grunt.registerTask('publish', [
+    'build',
+    'gh-pages'
   ]);
 
 };
