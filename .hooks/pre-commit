@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-// GRUNT-GITHOOKS START
 var exec = require('child_process').exec;
 
 exec('grunt jsdoc2md:docs', function (err, stdout, stderr) {
@@ -25,7 +24,3 @@ exec('grunt jsdoc2md:docs', function (err, stdout, stderr) {
   });
 
 });
-
-
-
-// GRUNT-GITHOOKS END
