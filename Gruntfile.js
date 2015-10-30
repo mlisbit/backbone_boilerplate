@@ -43,10 +43,8 @@ module.exports = function(grunt) {
 
     jsdoc2md: {
       docs: {
-        files: [
-          { src: "js/globals.js", dest: "api/globals.md" },
-          { src: "js/router.js",  dest: "api/router.md" },
-        ]
+          src: "js/*.js",
+          dest: "api/api.md",
       },
     },
 
@@ -113,7 +111,7 @@ module.exports = function(grunt) {
           port: 8000,
         }
       }
-    }
+    }, //end connect
 
   });
 
