@@ -1,0 +1,14 @@
+{
+  "name": "tests",
+  "homepage": "https://github.com/mlisbit/backbone_boilerplate",
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "chai": "~3.4.0",
+    "Squire.js": "squire.js#~0.2.0",
+    "mocha": "~2.3.3"
+  }
+}
