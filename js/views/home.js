@@ -8,7 +8,7 @@ define([
 ], function($, _, Backbone, Globals, events, template){
 
   var View = Backbone.View.extend({
-    el: '#control-board-1',
+    el: '#control-board-2',
 
     initialize: function() {
       events.on('home:render', this.render, this);
@@ -16,7 +16,7 @@ define([
 
     render: function(options) {
       var the_template = _.template( template );
-      events.trigger("dashboard:renderSubView", {self: this, template: the_template, options: {}})
+      events.trigger("dashboard:goToSubView", {self: this, template: the_template, options: {}})
     },
   });
   return new View();

@@ -16,7 +16,7 @@ define([
 
     render: function(options) {
       var the_template = _.template( template );
-      events.trigger("dashboard:renderSubView", {self: this, template: the_template, options: {}})
+      events.trigger("dashboard:goToSubView", {self: this, template: the_template, options: {}})
     },
   });
   return new View();
