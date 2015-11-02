@@ -4,7 +4,6 @@ html, body {
   margin  : 0;
   padding : 0;
   width   : 100%;
-  height  : 100%;
 }
 
 .bg-blue {
@@ -16,7 +15,6 @@ html, body {
 }
 
 #main {
-  height: 100%;
 }
 
 .page {
@@ -30,7 +28,6 @@ html, body {
 }
 
 #control-boards {
-  height: 100%;
   position: relative;
 }
 
@@ -38,13 +35,4 @@ html, body {
   visibility  : visible;
   opacity     : 1;
   transition  : all 1s;
-}
-
-#control-transition {
-  height    : 100vh;
-  width     : 100%;
-  position  : absolute;
-  top       : 0;
-  left      : -100%;
-  background: green;
 }
