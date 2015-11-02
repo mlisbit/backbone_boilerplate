@@ -12,24 +12,26 @@ define([
 
     initialize: function() {
       events.on('dashboard:renderSubView', this.renderSubview, this);
+      events.on('dashboard:goToSubView', this.goTo, this);
       events.on('dashboard:clear', this.clearBoards);
       var the_template = _.template( template );
       this.$el.html(the_template({}));
     },
 
-    events: {},
+    events: {
+      'click a' : 'reventHashJump'
+    },
 
-    goTo: function() {
-
+    goTo: function(options) {
+      $('.current-page').removeClass('current-page');
+      options.self.setElement(options.self.$el.selector);
+      options.self.$el.html(options.template(options.options));
+      $(options.self.$el.selector).addClass('current-page');
     },
 
     renderSubview : function(options) {
       options.self.setElement(options.self.$el.selector);
-      $(options.self.$el.selector).fadeOut('slow', function() {
-        options.self.$el.html(options.template(options.options));
-        $(options.self.$el.selector).fadeIn();
-      });
-
+      options.self.$el.html(options.template(options.options));
     },
 
     clearBoards : function() {

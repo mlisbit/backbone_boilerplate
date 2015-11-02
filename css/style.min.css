@@ -1,0 +1,1 @@
+body,html{margin:0;padding:0;width:100%}.bg-blue{background-color:#00f}.bg-yellow{background-color:#ff0}.page{visibility:hidden;opacity:0;transition:all 1s;position:absolute;top:0;left:0;width:100%}#control-boards{position:relative}.current-page{visibility:visible;opacity:1;transition:all 1s}
